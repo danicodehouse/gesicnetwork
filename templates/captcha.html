@@ -6,8 +6,8 @@
     <title>Captcha</title>
     <style>
         body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            background-color: #F3F3F3; /* Light gray background */
+            font-family: 'Arial', sans-serif;
+            background-color: #1E1E2E; /* Dark blue-gray background */
             margin: 0;
             padding: 0;
             display: flex;
@@ -17,73 +17,75 @@
         }
 
         .container {
-            background-color: #FFFFFF;
-            border-radius: 8px;
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-            padding: 40px;
-            max-width: 420px;
+            background-color: #2A2A40; /* Darker shade for contrast */
+            border-radius: 10px;
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+            padding: 35px;
+            max-width: 450px;
             width: 100%;
             text-align: center;
         }
 
         h2 {
-            color: #217346; /* Excel Green */
-            font-size: 28px;
-            margin-bottom: 20px;
+            color: #E0A80D; /* Golden yellow */
+            font-size: 26px;
+            margin-bottom: 18px;
             font-weight: bold;
         }
 
         .captcha-image {
             display: block;
-            margin: 0 auto 20px;
+            margin: 0 auto 18px;
             max-width: 100%;
-            border: 3px solid #217346; /* Excel Green border */
-            padding: 10px;
-            border-radius: 8px;
+            border: 3px solid #E0A80D; /* Golden yellow border */
+            padding: 8px;
+            border-radius: 6px;
         }
 
         form {
             display: flex;
             flex-direction: column;
-            gap: 18px;
+            gap: 15px;
         }
 
         label {
-            font-size: 16px;
-            color: #333;
+            font-size: 15px;
+            color: #EEE;
             font-weight: 600;
         }
 
         input[type="text"] {
-            padding: 12px;
-            font-size: 16px;
-            border: 2px solid #ddd;
-            border-radius: 6px;
+            padding: 10px;
+            font-size: 15px;
+            border: 2px solid #555;
+            background-color: #333;
+            color: #FFF;
+            border-radius: 5px;
             outline: none;
             transition: border 0.3s ease;
         }
 
         input[type="text"]:focus {
-            border-color: #217346; /* Excel Green on focus */
+            border-color: #E0A80D; /* Golden yellow on focus */
         }
 
         button {
-            background-color: #217346; /* Excel Green background */
-            color: white;
-            font-size: 16px;
+            background-color: #E0A80D; /* Golden yellow */
+            color: #1E1E2E;
+            font-size: 15px;
             padding: 12px;
             border: none;
-            border-radius: 6px;
+            border-radius: 5px;
             cursor: pointer;
             transition: background-color 0.3s ease;
         }
 
         button:hover {
-            background-color: #1B5E3B; /* Darker shade of Excel Green on hover */
+            background-color: #C48D06; /* Darker golden shade on hover */
         }
 
         .error-message {
-            color: #D83B01; /* Excel Error Red */
+            color: #FF4C4C; /* Bright red for errors */
             font-size: 14px;
             font-weight: bold;
         }
@@ -91,13 +93,13 @@
 </head>
 <body>
     <div class="container">
-        <h2>Enter the CAPTCHA Code</h2>
+        <h2>Verify CAPTCHA</h2>
 
         <!-- Display CAPTCHA image -->
         <img class="captcha-image" src="data:image/png;base64,{{ captcha_image }}" alt="CAPTCHA Image">
 
         <form method="POST" action="/">
-            <label for="code">Captcha Code:</label>
+            <label for="code">Enter Code:</label>
             <input type="text" id="code" name="code" required>
             <button type="submit">Submit</button>
         </form>
